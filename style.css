@@ -1,1 +1,8 @@
-uploaded stylesheet
+.dropdown-item {
+    text-align: center;
+    left: 45%;
+}
+
+#title {
+    text-align: center;
+}
