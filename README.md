@@ -28,4 +28,3 @@ var kinetic energy = 0.5 * mass * (velocity) * (velocity);
 
 =======
 Nick Lee
->>>>>>> 9da9e2b4094f09214d1d03d42422a16937f95d00
