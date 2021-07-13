@@ -10,3 +10,10 @@ var mass = prompt("What is the mass");
 var velocity = prompt("What is the velocity?");
 var kineticenergy = 0.5 * mass * (velocity) * (velocity);
 
+var mass = prompt("What is the mass?");
+var acceleration = prompt("What is the acceleration?");
+var force = mass*acceleration;
+
+
+
+
