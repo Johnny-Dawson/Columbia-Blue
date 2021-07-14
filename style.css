@@ -1,8 +1,18 @@
 
+<<<<<<< HEAD
 /* #dropdown-menu {
 .formatting{background-color: lightgrey; padding: 5px;font-size: 40px;} */
 #dropdown-menu {
 }
+=======
+
+/* #dropdown-menu {
+.formatting{background-color: lightgrey; padding: 5px;font-size: 40px;} */
+#dropdown-menu {
+.formatting{background-color: lightgrey; padding: 5px;font-size: 40px;}
+
+
+>>>>>>> 393f2d595f5b2900635d8bba55ab3dabebf63135
 
 
 #title {
