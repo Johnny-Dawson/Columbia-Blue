@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <title>Newton's Law of Gravitation</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">    
-    </head>
-    <body>
-        <h1>Newton's Law of Gravitation</h1>
-        <img src= "Gravitation.png" alt="Gravitation equation image">
-    </body>
+
+<head>
+    <title>Newton's Law of Gravitation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src=calculations.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        function calculate() {
+            var A = document.getElementById("G").value;
+            var B = document.getElementById("m1").value;
+            var C = document.getElementById("m2").value;
+            var D = document.getElementById("r").value;
+            var ans = ((A) * ((B * C) / (D * D)));
+            $("#result").text(ans);
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Newton's Law of Gravitation</h1>
+    <img src="Gravitation.png" alt="Gravitation equation image">
+
+    <div class="card mt-1">
+        <div class="card-header">
+            <div class="card-body text-center">
+                <h3 class="card-title">Result</h3>
+                <h1 id="result"></h1>
+            </div>
+        </div>
+
+
+        <div class="input-group mb-3">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">G</span>
+                </div>
+                <input type="number" id="G" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">M1</span>
+                </div>
+                <input type="number" id="m1" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">M2</span>
+                </div>
+                <input type="number" id="m2" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">R</span>
+                </div>
+                <input type="number" id="r" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+
+            <button onClick='calculate()'>Calculate Kinetic Energy</button>
+
+
+</body>
