@@ -1,13 +1,15 @@
 
 /* #dropdown-menu {
 .formatting{background-color: lightgrey; padding: 5px;font-size: 40px;} */
-
+#dropdown-menu {
+}
 
 
 #title {
     text-align: center;
 }
 
-/* .sidebyside{
+.inline{
     display: inline-block;
-} */
+    width: 200 px;
+}
