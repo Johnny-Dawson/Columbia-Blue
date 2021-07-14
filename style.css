@@ -19,7 +19,19 @@
     text-align: center;
 }
 
+<<<<<<< HEAD
 .inline{
     display: inline-block;
     width: 200 px;
 }
+=======
+
+#input {
+    margin-top: 500px;
+}
+
+/* .sidebyside{
+    display: inline-block;
+} */
+
+>>>>>>> b3d8640f5f7bca58efb7d303940f2115e89d77b6

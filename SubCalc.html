@@ -19,15 +19,15 @@
         var C = document.getElementById("c").value;
         var D = document.getElementById("d").value;
 
-        var ans = ((A * B) - (C * D)) / (C - B);
+        var ans = ((0.5 * A) * (B * B));
         alert(ans);
     }
 
 
     function calc(){
-        var A = document.getElementById("mass").value;
-        var B = document.getElementById("acceleration").value;
-        var ans = (A * B);
+        var X = document.getElementById("mass").value;
+        var Y = document.getElementById("acceleration").value;
+        var ans = (x * Y);
        <p>ans </p>
     }
 
@@ -37,15 +37,17 @@
 
     <body>
 
-    <h1>FORMULA!</h1>
+    <h1>Kinetic Energy Equation!</h1>
 
     <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i55aetWklPc8/v1/-1x-1.jpg" class="img-fluid" alt="chemistry background image">
-
-    <input type='number' id='a'/>
-    <input type='number' id='b'/>
-    <input type='number' id='c'/>
-    <input type='number' id='d'/>
-    <button onClick='calculate()'>calculate</button>
+      <div id="inputs">
+        <input type='number' id='a'/>
+        <input type='number' id='b'/>
+        <input type='number' id='c'/>
+        <input type='number' id='d'/>
+        <button onClick='calculate()'>calculate</button>
+      </div>
+    
 
     <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -72,7 +74,7 @@
     
     <div class="input-group">
         <input type="text" class="form-control" aria-label="Text input with dropdown button">
-        <div class="input-group-append">
+        <!-- <div class="input-group-append">
           <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Action</a>
@@ -81,15 +83,20 @@
             <div role="separator" class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a>
           </div>
-        </div>
+        </div> -->
       </div>
+
+      <img src="https://i.ytimg.com/vi/D7LdQMS0Tgs/maxresdefault.jpg">
+      <h1>VARIABLE CHART!</h1>
+      <h2> The first input box represents "M" and the second imput box represents "V"</h2>
+
 
 
       <div class=“input-group mb-3 inline”>
         <span class=“input-group-text” id=“basic-addon1”>@</span>
         <input type=“text” class=“form-control” placeholder=“Username” aria-label=“Username” aria-describedby=“basic-addon1">
       </div>
-      <div class=“dropdown inline”>
+      <!-- <div class=“dropdown inline”>
         <button class=“btn btn-secondary dropdown-toggle” type=“button” id=“dropdownMenuButton1" data-bs-toggle=“dropdown” aria-expanded=“false”>
           Dropdown button
         </button>
@@ -98,11 +105,12 @@
           <li><a class=“dropdown-item” href=“#”>Another action</a></li>
           <li><a class=“dropdown-item” href=“#”>Something else here</a></li>
         </ul>
-      </div>
+      </div> -->
 
       <p>TEST</p>
       var test = "AAAAAAAAAAAAAAAAAAAAAaaa";
       <p>test</p>
+
 
     
 
