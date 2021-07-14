@@ -13,8 +13,6 @@
     display:inline-block;
 padding-left: 800px;
 
-}
-
  .card3 {
     display:inline-block;
     margin: 150px;
@@ -28,13 +26,14 @@ width: 2000px;
 margin:auto;
 position:relative
 }
-
-
-
+  
+.inline{
+    display: inline-block;
+    width: 200px;
+  }
 
 
 #title {
     text-align: center;
 }
-
 
