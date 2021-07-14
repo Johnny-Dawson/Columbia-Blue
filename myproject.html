@@ -8,11 +8,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
+      <script>
+
+        function calculate(){
+          var A = document.getElementById("a").value;
+          var B = document.getElementById("b").value;
+          var C = document.getElementById("c").value;
+          var D = document.getElementById("d").value;
+
+          var ans = ((A * B) - (C * D)) / (C - B);
+          alert(ans);
+      }
+      </script>
+
     </head>
     <body>
 <h1>Algebra Calculator!</h1>
 
-<a class="dropdown-item" href="SubCalc.html">Quadratic Formula</a>
+<input type='number' id='a'/>
+    <input type='number' id='b'/>
+    <input type='number' id='c'/>
+    <input type='number' id='d'/>
+    <button onClick='calculate()'>calculate</button>
+
+<!-- <a class="dropdown-item" href="SubCalc.html">Quadratic Formula</a>
 <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Dropdown button
@@ -29,7 +48,7 @@
 
 
 </div>
-
+ -->
 
 
 
