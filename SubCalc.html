@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>Welcome to the Kinetic Energy Equation</title>
+        <title>Formula Name Here</title>
 
     <script src = calculations.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,22 +13,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 
     <script>
+
+    function calculate(){
+        var A = document.getElementById("mass").value;
+        var B = document.getElementById("velocity").value;
       
-      function calculate(){
-        var A = document.getElementById("a").value;
-        var B = document.getElementById("b").value;
-    
         var ans = ((0.5 * A) * (B * B));
         $("#result").text(ans);
     }
-
-
-    // function calc(){
-    //     var X = document.getElementById("mass").value;
-    //     var Y = document.getElementById("acceleration").value;
-    //     var ans = (x * Y);
-    //    <p>ans </p>
-    // }
 
     </script>
 
@@ -59,24 +51,27 @@
     
 
     <!-- <div class="input-group mb-3">
+  
+    <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text">Mass</span>
       </div>
       <input type="number" id = "mass" class="form-control" aria-label="Amount (to the nearest dollar)">
     </div>
+
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text">Acceleration</span>
+        <span class="input-group-text">Velocity</span>
       </div>
-      <input type="number" id = "acceleration" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <input type="number" id = "velocity" class="form-control" aria-label="Amount (to the nearest dollar)">
     </div>
     <button onClick='calc()'>PHYSICS CALCULATOR</button> -->
 
 
+    <button onClick='calculate()'>Calculate Kinetic Energy</button>
+
+
     <div class="input-group mb-3">
-
-    <!-- <div class="input-group mb-3">
-
         <div class="input-group-prepend">
           <span class="input-group-text">$</span>
           <span class="input-group-text">0.00</span>
@@ -95,13 +90,13 @@
             <div role="separator" class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a>
           </div>
+        </div> -->
+      </div>
 
-
+      <img src="https://i.ytimg.com/vi/D7LdQMS0Tgs/maxresdefault.jpg">
       <h1>VARIABLE CHART!</h1>
       <h2> The first input box represents "M" and the second imput box represents "V"</h2>
-      
-      <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i55aetWklPc8/v1/-1x-1.jpg" class="img-fluid" alt="chemistry background image">
-      
+
 
 
       <div class=“input-group mb-3 inline”>
@@ -117,28 +112,14 @@
           <li><a class=“dropdown-item” href=“#”>Another action</a></li>
           <li><a class=“dropdown-item” href=“#”>Something else here</a></li>
         </ul>
-      </div> 
+      </div> -->
 
       <p>TEST</p>
       var test = "AAAAAAAAAAAAAAAAAAAAAaaa";
       <p>test</p>
 
 
-      <!-- <span class=“input-group mb-3 sidebyside”>
-            <span class=“input-group-prepend sidebyside”>
-              <span class=“input-group-text sidebyside”>Some Variable</span>
-            </span>
-            <input type=“text” class=“form-control” aria-label=“Text input with dropdown button”>
-            <button class=“btn btn-outline-secondary dropdown-toggle” type=“button” data-toggle=“dropdown” aria-haspopup=“true” aria-expanded=“false”>Dropdown for units</button>
-                <span class=“input-group-append sidebyside”>
-                  <span class=“dropdown-menu sidebyside”>
-                    <a class=“dropdown-item” href=“#”>Action</a>
-                    <a class=“dropdown-item” href=“#”>Another action</a>
-                    <a class=“dropdown-item” href=“#”>Something else here</a>
-                    <div role=“separator” class=“dropdown-divider”></div>
-                    <a class=“dropdown-item” href=“#”>Separated link</a>
-                  </span>
-                </span> -->
+    
 
     </body>
     
