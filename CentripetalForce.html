@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Physics: Centripetal Force</title>
+
+    <script src = calculations.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+      <script>
+
+        function calculate(){
+            var A = document.getElementById("mass").value;
+            var B = document.getElementById("velocity").value;
+            var C = document.getElementById("radius").value;
+          
+            var ans = ((B * B) * A / C);
+            $("#result").text(ans);
+
+            document.getElementById("demo").innerHTML = "Newtons"; //manipulate this to change unit on bottom
+        }
+    
+        </script>
+
+    <div class = "container">
+      <div class = "row">
+
+      <div class="card col-6">
+        <div class="bg-image hover-overlay ripple">
+          <img
+            src="https://www.thingswedontknow.com/img/doo/physics.png"
+            class="img-fluid mx-auto" width = 100%
+          />
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title text-center card-header bg-info text-white">Centripetal Force Formula</h1>
+          <img
+            src="centripetalForce.png.crdownload"
+            class="img-fluid mx-auto" width = 100%
+          />
+          <p>This is the centripetal force formula above.</p>
+
+        </div>
+      </div>
+
+    
+
+    <div class = "col-6">
+      <div class="card text-center">
+        <div class="card-header">Centripetal Force Calculator</div>
+        <div class="card-body">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-info text-white">Mass (m)</span>
+            </div>
+            <input type="number" id = "mass" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-info text-white">kg</span>
+          </div>
+    
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-info text-white">Velocity (v)</span>
+            </div>
+            <input type="number" id = "velocity" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-info text-white">m/s</span>
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-info text-white">Radius (r)</span>
+            </div>
+            <input type="number" id = "radius" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-info text-white">m</span>
+          </div>
+
+          <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Centripetal Force</button>
+          
+        
+         
+      </div>
+
+
+      <div class="card mt-1">
+        <div class="card-header">
+          <div class="card-body text-center">
+            <h3 class="card-title">Result</h3>
+            <h1 id="result"></h1>
+          </div>
+        </div>
+    
+      </div>
+      <!-- DO NOT DELETE THIS BELOW, SHOWS UNIT WHEN calculate FUNCTION IS CALLED-->
+      <h1 id="demo"></h1> 
+
+
+
+
+    </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+    </body>
+    
+</html>
