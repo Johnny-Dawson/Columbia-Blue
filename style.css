@@ -22,23 +22,19 @@ padding-left: 800px; */
 
 
 
+
 body{
     background-color: #b2f0f1;
-    
+
    
 }
   
-/* .inline{
-    display: inline-block;
-    width: 200px;
-  } */
-
 
 #title {
     text-align: center;
     font-weight: bold;
    color:white;
-   background-color:rgb(0, 0, 71);
+   background-color:rgb(0, 0, 72);
    padding: 20px;
 }
 
