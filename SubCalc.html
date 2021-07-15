@@ -20,6 +20,8 @@
           
             var ans = ((0.5 * A) * (B * B));
             $("#result").text(ans);
+
+            document.getElementById("demo").innerHTML = "Joules"; //manipulate this to change unit
         }
     
         </script>
@@ -79,19 +81,22 @@
         <div class="card-body">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text">Mass</span>
+              <span class="input-group-text">Mass (m)</span>
             </div>
             <input type="number" id = "mass" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text">kg</span>
           </div>
     
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text">Velocity</span>
+              <span class="input-group-text">Velocity (v)</span>
             </div>
             <input type="number" id = "velocity" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text">m/s</span>
           </div>
 
-          <button onClick='calculate()'>Calculate Kinetic Energy</button>
+          <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Kinetic Energy</button>
+          
         
          
       </div>
@@ -106,6 +111,10 @@
         </div>
     
       </div>
+      <!-- DO NOT DELETE THIS BELOW, SHOWS UNIT WHEN calculate function is called -->
+      <h1 id="demo"></h1> 
+
+
 
 
     </div>
