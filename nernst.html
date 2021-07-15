@@ -11,23 +11,7 @@
 
     <body>
 
-      <script>
-
-        function calculate(){
-            var A = document.getElementById("ReductionPotential").value;
-            var B = document.getElementById("StandardPotential").value;
-            
-            var D = document.getElementById("IonCharge").value;
-            var E = document.getElementbyId ("ReactionQuotient").value;
-          
-            var ans = (B - ( ( 3.145 * C ) / ( D * 96500 ) * 2.303 ) ) ;
-            $("#result").text(ans);
-
-            document.getElementById("demo").innerHTML = "Reduction Potential"; //manipulate this to change unit
-        }
-    
-        </script>
-
+     
         <h1>Nernst Equation</h1>
         <img src= "nernst_equation.png" alt="nernst equation equation image">
     </body>
@@ -67,11 +51,27 @@
           <span class="input-group-text">Reaction Quotient</span>
         </div>
         <input type="number" id = "ReactionQuotient" class="form-control" aria-label="Amount (to the nearest dollar)">
-        
+          <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Cell Potential</button>
       </div>
 
+ <script>
 
-      <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Cell Potential</button>
+        function calculate(){
+            var A = document.getElementById("ReductionPotential").value;
+            var B = document.getElementById("StandardPotential").value;
+            var C = document.getElementById("TemperatureInKelvin").value;
+            var D = document.getElementById("IonCharge").value;
+            var E = document.getElementbyId ("ReactionQuotient").value;
+          
+            var ans = (B - ( ( 3.145 * C ) / ( D * 96500 ) * 2.303 ) ) ;
+            $("#result").text(ans);
+
+            document.getElementById("demo").innerHTML = "Reduction Potential"; //manipulate this to change unit
+        }
+    
+        </script>
+
+    
 
     <div class="card mt-1">
         <div class="card-header">
