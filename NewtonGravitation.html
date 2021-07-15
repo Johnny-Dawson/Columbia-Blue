@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <h1 class="card-title text-center card-header bg-info text-white">Newton's Law of Gravitation
                         Formula</h1>
-                    <img src="http://static2.mbtfiles.co.uk/media/docs/newdocs/international_baccalaureate/physics/842081/html/images/image04.png"
+                    <img src="Gravitation.png"
                         class="img-fluid mx-auto" width=100% />
                     <p>This is the Newton's Law of Gravitation formula above. </p>
 
@@ -49,28 +49,45 @@
 
             <div class="col-6">
                 <div class="card text-center">
-                    <div class="card-header">Kinetic Energy Calculator</div>
+                    <div class="card-header">Newton's Law of Gravitation Calculator</div>
                     <div class="card-body">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text bg-info text-white">Mass (m)</span>
+                                <span class="input-group-text bg-info text-white">Gravity (g)</span>
                             </div>
-                            <input type="number" id="mass" class="form-control"
+                            <input type="number" id="gravity" class="form-control"
+                                aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text bg-info text-white">m/s^s</span>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-info text-white">Mass 1 (m)</span>
+                            </div>
+                            <input type="number" id="m1" class="form-control"
                                 aria-label="Amount (to the nearest dollar)">
                             <span class="input-group-text bg-info text-white">kg</span>
                         </div>
 
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text bg-info text-white">Velocity (v)</span>
+                                <span class="input-group-text bg-info text-white">Mass 2 (m)</span>
                             </div>
-                            <input type="number" id="velocity" class="form-control"
+                            <input type="number" id="m2" class="form-control"
                                 aria-label="Amount (to the nearest dollar)">
-                            <span class="input-group-text bg-info text-white">m/s</span>
+                            <span class="input-group-text bg-info text-white">kg</span>
                         </div>
 
-                        <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Kinetic
-                            Energy</button>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-info text-white">Distance between masses center (r)</span>
+                            </div>
+                            <input type="number" id="radius" class="form-control"
+                                aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text bg-info text-white">m</span>
+                        </div>
+
+                        <button type="button" class="btn btn-outline-info" onClick='calculate()'>Newton's Law of Gravitation Calculate</button>
 
 
 
