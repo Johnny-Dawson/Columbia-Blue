@@ -22,16 +22,13 @@ padding-left: 800px; */
 
 
 
- body{
-     border-color
+
+body{
+    background-color: #b2f0f1;
+
    
 }
   
-/* .inline{
-    display: inline-block;
-    width: 200px;
-  } */
-
 
 #title {
     text-align: center;
