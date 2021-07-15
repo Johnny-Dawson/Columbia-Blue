@@ -16,14 +16,14 @@
         function calculate(){
             var A = document.getElementById("ReductionPotential").value;
             var B = document.getElementById("StandardPotential").value;
-            var C = document.getElementById("TemperatureInKelvin").value;
+            
             var D = document.getElementById("IonCharge").value;
             var E = document.getElementbyId ("ReactionQuotient").value;
           
-            var ans = (B - ((3.145 * C)/(D * 96500) * 2.303));
+            var ans = (B - ( ( 3.145 * C ) / ( D * 96500 ) * 2.303 ) ) ;
             $("#result").text(ans);
 
-            document.getElementById("demo").innerHTML = "Joules"; //manipulate this to change unit
+            document.getElementById("demo").innerHTML = "Reduction Potential"; //manipulate this to change unit
         }
     
         </script>
@@ -31,13 +31,6 @@
         <h1>Nernst Equation</h1>
         <img src= "nernst_equation.png" alt="nernst equation equation image">
     </body>
-    <div class="card mt-1">
-        <div class="card-header">
-          <div class="card-body text-center">
-            <h3 class="card-title">Result</h3>
-            <h1 id="result"></h1>
-          </div>
-        </div>
   
     <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -51,6 +44,7 @@
         <span class="input-group-text">Standard Potential</span>
       </div>
       <input type="number" id = "StandardPotential" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <span class="input-group-text bg-info text-white">V</span>
     </div>
 
       <div class="input-group mb-3">
@@ -58,6 +52,7 @@
           <span class="input-group-text">Temperature in Kelvin</span>
         </div>
         <input type="number" id = "TemperatureinKelvin" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text bg-info text-white">K</span>
       </div>
 
       <div class="input-group mb-3">
@@ -72,10 +67,11 @@
           <span class="input-group-text">Reaction Quotient</span>
         </div>
         <input type="number" id = "ReactionQuotient" class="form-control" aria-label="Amount (to the nearest dollar)">
+        
       </div>
 
 
-    <button onClick='calculate()'>Calculate Cell Potential</button>
+      <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Cell Potential</button>
 
     <div class="card mt-1">
         <div class="card-header">
