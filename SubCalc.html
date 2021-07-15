@@ -4,34 +4,36 @@
         <title>Physics: Kinetic Energy Calculator</title>
 
     <script src = calculations.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
-    <script>
- 
-
-    </script>
-
     </head>
 
     <body>
 
+      <script>
 
-  
-    <h1>Kinetic Energy Equation!</h1>
+        function calculate(){
+            var A = document.getElementById("mass").value;
+            var B = document.getElementById("velocity").value;
+          
+            var ans = ((0.5 * A) * (B * B));
+            $("#result").text(ans);
 
-    <img src="https://lh3.googleusercontent.com/proxy/kCWdexrwM9ReSEtxokgYZ2HgLe9vtQyQsVWtbRFbm9SXfR8nW7-_E_bNyUPEc9x7iAaA5JZuQjGU6YP2CL4vIRhu9xw7MmO7bnqltcvrZjuYp52z-9wwBwug3g">
+            document.getElementById("demo").innerHTML = "Joules"; //manipulate this to change unit
+        }
+    
+        </script>
 
 
-
-      <div class="card mt-1">
-        <div class="card-header">
-          <div class="card-body text-center">
-            <h3 class="card-title">Result</h3>
-            <h1 id="result"></h1>
-          </div>
+    <!-- WHAT WE HAD BEFORE <div class="card mt-1">
+      <div class="card-header">
+        <div class="card-body text-center">
+          <h3 class="card-title">Result</h3>
+          <h1 id="result"></h1>
         </div>
+      </div>
   
     <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -47,40 +49,80 @@
       <input type="number" id = "velocity" class="form-control" aria-label="Amount (to the nearest dollar)">
     </div>
 
-    <button onClick='calculate()'>Calculate Kinetic Energy</button>
+    <button onClick='calculate()'>Calculate Kinetic Energy</button> -->
 
+    <div class = "container">
+      <div class = "row">
 
-    <!-- <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">$</span>
-          <span class="input-group-text">0.00</span>
+      <div class="card col-6">
+        <div class="bg-image hover-overlay ripple">
+          <img
+            src="https://www.thingswedontknow.com/img/doo/physics.png"
+            class="img-fluid mx-auto" width = 100%
+          />
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
         </div>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-      </div> -->
-    
-    <!-- <div class="input-group">
-        <input type="text" class="form-control" aria-label="Text input with dropdown button"> -->
-        <!-- <div class="input-group-append">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div role="separator" class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div> -->
+        <div class="card-body">
+          <h1 class="card-title text-center card-header bg-info text-white">Kinetic Energy Formula</h1>
+          <img
+            src="http://static2.mbtfiles.co.uk/media/docs/newdocs/international_baccalaureate/physics/842081/html/images/image04.png"
+            class="img-fluid mx-auto" width = 100%
+          />
+          <p>This is the kinetic energy formula above. </p>
 
+        </div>
       </div>
 
-      
+    
 
-      <!-- <img src="https://i.ytimg.com/vi/D7LdQMS0Tgs/maxresdefault.jpg">
-      <h1>VARIABLE CHART!</h1>
-      <h2> The first input box represents "M" and the second imput box represents "V"</h2> -->
+    <div class = "col-6">
+      <div class="card text-center">
+        <div class="card-header">Kinetic Energy Calculator</div>
+        <div class="card-body">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-info text-white">Mass (m)</span>
+            </div>
+            <input type="number" id = "mass" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-info text-white">kg</span>
+          </div>
+    
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-info text-white">Velocity (v)</span>
+            </div>
+            <input type="number" id = "velocity" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-info text-white">m/s</span>
+          </div>
+
+          <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Kinetic Energy</button>
+          
+        
+         
+      </div>
 
 
-        <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i55aetWklPc8/v1/-1x-1.jpg" class="img-fluid" alt="chemistry background image">
+      <div class="card mt-1">
+        <div class="card-header">
+          <div class="card-body text-center">
+            <h3 class="card-title">Result</h3>
+            <h1 id="result"></h1>
+          </div>
+        </div>
+    
+      </div>
+      <!-- DO NOT DELETE THIS BELOW, SHOWS UNIT WHEN calculate function is called -->
+      <h1 id="demo"></h1> 
+
+
+
+
+    </div>
+
+    </div>
+
+  </div>
+</div>
 
 
     </body>
