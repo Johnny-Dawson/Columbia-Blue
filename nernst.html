@@ -16,11 +16,11 @@
         function calculate(){
             var A = document.getElementById("ReductionPotential").value;
             var B = document.getElementById("StandardPotential").value;
-            var C = document.getElementById("UniversalGasConstant").value;
-            var D = document.getElementById("TemperatureInKelvin").value;
-            var E = document.getElementById("IonCharge").value;
+            var C = document.getElementById("TemperatureInKelvin").value;
+            var D = document.getElementById("IonCharge").value;
+            var E = document.getElementbyId ("ReactionQuotient").value;
           
-            var ans = ((D+273.15));
+            var ans = (B - ((3.145 * C)/(D * 96500) * 2.303));
             $("#result").text(ans);
 
             document.getElementById("demo").innerHTML = "Joules"; //manipulate this to change unit
@@ -53,13 +53,6 @@
       <input type="number" id = "StandardPotential" class="form-control" aria-label="Amount (to the nearest dollar)">
     </div>
 
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Universal Gas Constant</span>
-        </div>
-        <input type="number" id = "UniversalGasConstant" class="form-control" aria-label="Amount (to the nearest dollar)">
-      </div>
-
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text">Temperature in Kelvin</span>
@@ -74,6 +67,13 @@
         <input type="number" id = "IonCharge" class="form-control" aria-label="Amount (to the nearest dollar)">
       </div>
 
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Reaction Quotient</span>
+        </div>
+        <input type="number" id = "ReactionQuotient" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+
 
     <button onClick='calculate()'>Calculate Cell Potential</button>
 
@@ -84,37 +84,14 @@
             <h1 id="result"></h1>
           </div>
         </div>
-    
       </div>
+      <h1 id="demo"></h1>
       
-    <!-- <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">$</span>
-          <span class="input-group-text">0.00</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-      </div> -->
-    
-    <!-- <div class="input-group">
-        <input type="text" class="form-control" aria-label="Text input with dropdown button"> -->
-        <!-- <div class="input-group-append">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div role="separator" class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div> -->
 
       </div>
 
       
 
-      <!-- <img src="https://i.ytimg.com/vi/D7LdQMS0Tgs/maxresdefault.jpg">
-      <h1>VARIABLE CHART!</h1>
-      <h2> The first input box represents "M" and the second imput box represents "V"</h2> -->
 
 
         
