@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Physics: Force Calculator</title>
+
+    <script src = calculations.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+      <script>
+
+        function calculate(){
+            var A = document.getElementById("mass").value;
+            var B = document.getElementById("acceleration").value;
+          
+            var ans = ( A* B );
+            $("#result").text(ans);
+
+            document.getElementById("demo").innerHTML = "Newtons"; //manipulate this to change unit on bottom
+        }
+    
+        </script>
+
+    <div class = "container">
+      <div class = "row">
+
+      <div class="card col-6">
+        <div class="bg-image hover-overlay ripple">
+          <img
+            src="https://www.thingswedontknow.com/img/doo/physics.png"
+            class="img-fluid mx-auto" width = 100%
+          />
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title text-center card-header bg-info text-white">Newton's Second Law of Motion</h1>
+          <img
+            src="data:image/png;base64,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"
+            class="img-fluid mx-auto" width = 100%
+          />
+          <p></p>
+
+        </div>
+      </div>
+
+    
+
+    <div class = "col-6">
+      <div class="card text-center">
+        <div class="card-header">Force Calculator</div>
+        <div class="card-body">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-info text-white">Mass (m)</span>
+            </div>
+            <input type="number" id = "mass" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-info text-white">kg</span>
+          </div>
+    
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-info text-white">Acceleration (a)</span>
+            </div>
+            <input type="number" id = "acceleration" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-info text-white">m/s<sup>2</sup></span>
+          </div>
+
+          <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Force</button>
+          
+        
+         
+      </div>
+
+
+      <div class="card mt-1">
+        <div class="card-header">
+          <div class="card-body text-center">
+            <h3 class="card-title">Result</h3>
+            <h1 id="result"></h1>
+          </div>
+        </div>
+    
+      </div>
+      <!-- DO NOT DELETE THIS BELOW, SHOWS UNIT WHEN calculate FUNCTION IS CALLED-->
+      <h1 id="demo"></h1> 
+
+
+
+
+    </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+    </body>
+    
+</html>
