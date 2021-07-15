@@ -13,15 +13,17 @@
     display:inline-block;
 padding-left: 800px; */
 
- 
-
+ .card{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(204,204,213,1) 0%, rgba(244,244,246,1) 45%, rgba(211,211,219,1) 91%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
+ padding: 15px;
+}
 
 
 
 
  body{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(19,173,240,0.6811099439775911) 0%, rgba(20,189,252,0.7455357142857143) 11%, rgba(7,157,123,0.6306897759103641) 27%, rgba(3,151,215,0.7679446778711485) 48%, rgba(2,123,233,0.8183648459383753) 72%, rgba(0,212,255,0.835171568627451) 100%); 
+   
 }
   
 /* .inline{
@@ -33,5 +35,8 @@ padding-left: 800px; */
 #title {
     text-align: center;
     font-weight: bold;
+   color:white;
+   background-color:rgb(0, 0, 71);
+   padding: 20px;
 }
 
