@@ -11,8 +11,23 @@
 
     <body>
 
+      <script>
 
-        
+        function calculate(){
+            var A = document.getElementById("ReductionPotential").value;
+            var B = document.getElementById("StandardPotential").value;
+            var C = document.getElementById("UniversalGasConstant").value;
+            var D = document.getElementById("TemperatureInKelvin").value;
+            var E = document.getElementById("IonCharge").value;
+          
+            var ans = ((D+273.15));
+            $("#result").text(ans);
+
+            document.getElementById("demo").innerHTML = "Joules"; //manipulate this to change unit
+        }
+    
+        </script>
+
         <h1>Nernst Equation</h1>
         <img src= "nernst_equation.png" alt="nernst equation equation image">
     </body>
@@ -28,14 +43,14 @@
       <div class="input-group-prepend">
         <span class="input-group-text">Reduction Potential</span>
       </div>
-      <input type="number" id = "Reduction Potential" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <input type="number" id = "ReductionPotential" class="form-control" aria-label="Amount (to the nearest dollar)">
     </div>
 
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text">Standard Potential</span>
       </div>
-      <input type="number" id = "Standard Potential" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <input type="number" id = "StandardPotential" class="form-control" aria-label="Amount (to the nearest dollar)">
     </div>
 
     <div class="input-group mb-3">
@@ -59,19 +74,6 @@
         <input type="number" id = "IonCharge" class="form-control" aria-label="Amount (to the nearest dollar)">
       </div>
 
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Faraday Constant</span>
-        </div>
-        <input type="number" id = "FaradayConstant" class="form-control" aria-label="Amount (to the nearest dollar)">
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Reaction Constants</span>
-        </div>
-        <input type="number" id = "reactionConstant" class="form-control" aria-label="Amount (to the nearest dollar)">
-      </div>
 
     <button onClick='calculate()'>Calculate Cell Potential</button>
 
