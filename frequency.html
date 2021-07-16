@@ -1,18 +1,7 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>Einstein's Theory of Special Relativity</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">    
-    </head>
-    <body>
-        <h1>Einstein's Theory of Special Relativity</h1>
-        <img src= "MassEnergy.png" alt="mass energy equation image">
-    </body> -->
-    <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <title>Physics: Einstein's Theory of Special Relativity</title>
+        <title>Chemistry: Kinetic Energy Calculator</title>
 
     <script src = calculations.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -27,12 +16,12 @@
 
         function calculate(){
             var A = document.getElementById("mass").value;
-            // var B = document.getElementById("velocity").value;
+            var B = document.getElementById("velocity").value;
           
-            var ans = (A) * (8.98755179e16);
+            var ans = ((0.5 * A) * (B * B));
             $("#result").text(ans);
 
-            document.getElementById("demo").innerHTML = "Joules"; //manipulate this to change unit
+            document.getElementById("demo").innerHTML = "Joules"; //manipulate this to change unit on bottom
         }
     
         </script>
@@ -49,12 +38,12 @@
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
         </div>
         <div class="card-body">
-          <h1 class="card-title text-center card-header bg-info text-white">Einstein's Theory of Special Relativity</h1>
+          <h1 class="card-title text-center card-header bg-info text-white">Kinetic Energy Formula</h1>
           <img
-            src="MassEnergy.png"
+            src="http://static2.mbtfiles.co.uk/media/docs/newdocs/international_baccalaureate/physics/842081/html/images/image04.png"
             class="img-fluid mx-auto" width = 100%
           />
-          <p>This is the formula above. The value for the speed of light squared (c^2) is approximately 8.98755179 × 10^16 m^2 / s^2.</p>
+          <p>This is the kinetic energy formula above. </p>
 
         </div>
       </div>
@@ -63,7 +52,7 @@
 
     <div class = "col-6">
       <div class="card text-center">
-        <div class="card-header bg-info text-white">Einstein's Theory of Special Relativity</div>
+        <div class="card-header">Kinetic Energy Calculator</div>
         <div class="card-body">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -72,18 +61,16 @@
             <input type="number" id = "mass" class="form-control" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text bg-info text-white">kg</span>
           </div>
-
-        
-<!--     
+    
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text bg-info text-white">Speed of Light Squared (c^2)</span>
+              <span class="input-group-text bg-info text-white">Velocity (v)</span>
             </div>
             <input type="number" id = "velocity" class="form-control" aria-label="Amount (to the nearest dollar)">
-            <span class="input-group-text bg-info text-white">m^2/s^2</span>
-          </div> -->
+            <span class="input-group-text bg-info text-white">m/s</span>
+          </div>
 
-          <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Energy</button>
+          <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Kinetic Energy</button>
           
         
          
@@ -99,7 +86,7 @@
         </div>
     
       </div>
-      <!-- DO NOT DELETE THIS BELOW, SHOWS UNIT WHEN calculate function is called -->
+      <!-- DO NOT DELETE THIS BELOW, SHOWS UNIT WHEN calculate FUNCTION IS CALLED-->
       <h1 id="demo"></h1> 
 
 

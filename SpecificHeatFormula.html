@@ -1,8 +1,7 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en-us">
         <head>
-            <title>Chemistry: Ideal Gas Law Calculator</title>
+            <title>Chemistry: Specific Heat Formula</title>
     
         <script src = calculations.js></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,14 +15,14 @@
           <script>
     
             function calculate(){
-                var A = document.getElementById("volume").value;
-                var B = document.getElementById("moles").value;
+                var A = document.getElementById("mass").value;
+                var B = document.getElementById("specificheat").value;
                 var C = document.getElementById("temperature").value;
               
-                var ans = ((C * B * 0.08206)/A);
+                var ans = (A*B*C);
                 $("#result").text(ans);
     
-                document.getElementById("demo").innerHTML = "atm"; //manipulate this to change unit on bottom
+                document.getElementById("demo").innerHTML = "Joules"; //manipulate this to change unit on bottom
             }
         
             </script>
@@ -40,12 +39,12 @@
                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
             </div>
             <div class="card-body">
-              <h1 class="card-title text-center card-header bg-info text-white">Ideal Gas Law</h1>
+              <h1 class="card-title text-center card-header bg-info text-white">Specific Heat Formula</h1>
               <img
-                src="IdealGasLaw.png"
+                src="https://www.gstatic.com/education/formulas2/355397047/en/specific_heat_capacity.svg"
                 class="img-fluid mx-auto" width = 100%
               />
-              <p>This is the ideal gas law above. The gas constant is R (0.08206 L atm mol<sup>-1</sup> K<sup>-1</sup>) </p>
+              <p></p>
     
             </div>
           </div>
@@ -54,33 +53,33 @@
     
         <div class = "col-6">
           <div class="card text-center">
-            <div class="card-header">Ideal Gas Law Calculator</div>
+            <div class="card-header  bg-info text-white">Specific Heat Capcity Calculator</div>
             <div class="card-body">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text bg-info text-white">Volume (V)</span>
+                  <span class="input-group-text bg-info text-white">Mass (m)</span>
                 </div>
-                <input type="number" id = "volume" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <span class="input-group-text bg-info text-white">L</span>
+                <input type="number" id = "mass" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text bg-info text-white">kg</span>
               </div>
 
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text bg-info text-white">Temperature (T)</span>
+                  <span class="input-group-text bg-info text-white">Specific Heat (c)</span>
+                </div>
+                <input type="number" id = "specificheat" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text bg-info text-white">J/kg∙K</span>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-info text-white">Temperature Change (∆T)</span>
                 </div>
                 <input type="number" id = "temperature" class="form-control" aria-label="Amount (to the nearest dollar)">
                 <span class="input-group-text bg-info text-white">K</span>
               </div>
-
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text bg-info text-white">Moles (n)</span>
-                </div>
-                <input type="number" id = "moles" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <span class="input-group-text bg-info text-white">mol</span>
-              </div>
     
-              <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Pressure</button>
+              <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Heat Energy</button>
             
           </div>
     
