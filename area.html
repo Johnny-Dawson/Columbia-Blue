@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Area of a Circle</title>
+
+    <script src = calculations.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+      <script>
+
+        function calculate(){
+            var A = document.getElementById("radius").value;
+          
+            var ans = (Math.PI * A);
+            $("#result").text(ans);
+
+            document.getElementById("demo").innerHTML = "units<sup>2</sup>" ; //manipulate this to change unit on bottom
+        }
+    
+        </script>
+
+    <div class = "container">
+      <div class = "row">
+
+      <div class="card col-6">
+        <div class="bg-image hover-overlay ripple">
+          <img
+            src="data:image/png;base64,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"
+            class="img-fluid mx-auto" width = 100%
+          />
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title text-center card-header bg-info text-white">Area of a Circle</h1>
+
+        </div>
+      </div>
+
+    
+
+    <div class = "col-6">
+      <div class="card text-center">
+        <div class="card-header">Area of a Circle Calculator</div>
+        <div class="card-body">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-info text-white">Radius</span>
+            </div>
+            <input type="number" id = "radius" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text bg-info text-white">units</span>
+          </div>
+
+          <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Area</button>
+        
+      </div>
+
+
+      <div class="card mt-1">
+        <div class="card-header">
+          <div class="card-body text-center">
+            <h3 class="card-title">Result</h3>
+            <h1 id="result"></h1>
+          </div>
+        </div>
+    
+      </div>
+      <!-- DO NOT DELETE THIS BELOW, SHOWS UNIT WHEN calculate FUNCTION IS CALLED-->
+      <h1 id="demo"></h1> 
+
+
+
+
+    </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+    </body>
+    
+</html>
