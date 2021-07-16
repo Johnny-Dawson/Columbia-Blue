@@ -1,11 +1,122 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <title>Nernst Equation</title>
+
+    <!DOCTYPE html>
+    <html lang="en-us">
+        <head>
+            <title>Chemistry: Nernst Equation</title>
+    
+        <script src = calculations.js></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">    
-    </head>
-    <body>
-        <h1>Nernst Equation</h1>
-        <img src= "nernst_equation.png" alt="nernst equation equation image">
-    </body>
+        <link rel="stylesheet" href="style.css">
+        </head>
+    
+        <body>
+    
+          <script>
+    
+            function calculate(){
+                var A = document.getElementById("StandardPotential").value;
+                var B = document.getElementById("IonCharge").value;
+                var C = document.getElementById("temperature").value;
+                var D = document.getElementById("ReactionQuotient").value;
+              
+                var ans = (A - ( ( 3.145 * C ) / ( B * 96500 ) * 2.303 * D ) ) ;
+            $("#result").text(ans);
+    
+                document.getElementById("demo").innerHTML = "atm"; //manipulate this to change unit on bottom
+            }
+        
+            </script>
+    
+        <div class = "container">
+          <div class = "row">
+    
+          <div class="card col-6">
+            <div class="bg-image hover-overlay ripple">
+              <img
+                src="https://www.cmuse.org/wp-content/uploads/2020/05/learn-chemistry-lessons-online.jpg"
+                class="img-fluid mx-auto" width = 100%
+              />
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title text-center card-header bg-info text-white">Nernst Equation</h1>
+              <img
+                src="IdealGasLaw.png"
+                class="img-fluid mx-auto" width = 100%
+              />
+              <p>The Nernst equation defines the relationship between cell potential to standard potential and to the activities of the electrically active (electroactive) species.<sup>-1</sup> K<sup>-1</sup>) </p>
+    
+            </div>
+          </div>
+    
+        
+    
+        <div class = "col-6">
+          <div class="card text-center">
+            <div class="card-header">Nernst Calculator!</div>
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-info text-white">Standard Potential</span>
+                </div>
+                <input type="number" id = "StandardPotential" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text bg-info text-white">V</span>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-info text-white">Temperature (T)</span>
+                </div>
+                <input type="number" id = "temperature" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text bg-info text-white">K</span>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-info text-white">IonCharge</span>
+                </div>
+                <input type="number" id = "IonCharge" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text bg-info text-white"></span>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-info text-white">Reaction Quotient</span>
+                </div>
+                <input type="number" id = "ReactionQuotient" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text bg-info text-white"></span>
+              </div>
+
+              <button type="button" class="btn btn-outline-info" onClick='calculate()'>Calculate Pressure</button>
+            
+          </div>
+    
+    
+          <div class="card mt-1">
+            <div class="card-header">
+              <div class="card-body text-center">
+                <h3 class="card-title">Result</h3>
+                <h1 id="result"></h1>
+              </div>
+            </div>
+        
+          </div>
+          <!-- DO NOT DELETE THIS BELOW, SHOWS UNIT WHEN calculate FUNCTION IS CALLED-->
+          <h1 id="demo"></h1> 
+    
+    
+    
+    
+        </div>
+    
+        </div>
+    
+      </div>
+    </div>
+    
+    
+        </body>
+        
+    </html>
